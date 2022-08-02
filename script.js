@@ -10,3 +10,10 @@ button.addEventListener("click", () => {
     // get random fortune from fortunes
     fortune.innerText = fortunes[Math.floor(Math.random() * fortunes.length )];
 })
+
+const addFortune = document.getElementById('addFortune');
+const addButton = document.getElementById('addBtn');
+addButton.addEventListener("click", () =>{
+    if (addFortune.value) fortunes.push(addFortune.value);
+    addFortune.value = '';
+})
