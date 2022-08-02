@@ -24,11 +24,26 @@ body {
 .content {
     display: flex;
     flex: 1;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     background-color: #2a3a53;
-
     color: white;
     font-size: 36px;
 }
+
+#btn {
+  background-color: inherit;
+  color: inherit;
+  font-size: 24px;
+  border: 2px solid white;
+  border-radius: 2px;
+  padding: 4px 24px;
+}
+#btn:active{
+  background-color: white;
+  border: 2px solid #2a3a53;
+  color: #2a3a53;
+}
+
