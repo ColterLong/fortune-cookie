@@ -4,7 +4,7 @@
 const addFortune = document.getElementById('addFortune');
 
 let fortunes = '';
-const backendUrl='http://127.0.0.1';
+const backendUrl='http://20.169.32.254';
 const backendPort=':3000';
 
 function insertFortune(fortune) {
