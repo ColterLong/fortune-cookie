@@ -4,9 +4,11 @@
 const addFortune = document.getElementById('addFortune');
 
 let fortunes = '';
+const backendUrl='http://127.0.0.1';
+const backendPort=':3000';
 
 function insertFortune(fortune) {
-  return axios.post('http://127.0.0.1:3000', { "fortune" : fortune })
+  return axios.post(`${backendUrl}${backendPort}`, { "fortune" : fortune })
     .then(function (response) {
     console.log(response);
     })
@@ -14,7 +16,7 @@ function insertFortune(fortune) {
 
 
 function refreshFortunes() {
-  return axios.get('http://127.0.0.1:3000/list', { params: {} })
+  return axios.get(`${backendUrl}${backendPort}/list`)
   .then(function (response) {
     console.log(response);
     fortunes = response.data.results;
